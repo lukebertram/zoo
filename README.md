@@ -51,6 +51,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 The following are features that I'd like to implement in the event that the app is approved for a larger project:
 
+- Refactor new Animal form view template to read in the entire form in a single directive statement if possible
 - Include photos of each animal as a part of the displayed animal information
 - Implement SASS architecture and styling
 - Filter displayed animals by diet (herbivore, carnivore, omnivore)
