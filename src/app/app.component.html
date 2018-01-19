@@ -3,7 +3,7 @@
     Welcome to {{ title }}
   </h1>
   <!-- <animal-list [childAnimalList]="masterAnimalList" (editClick)="editAnimal($event)"></animal-list> -->
-  <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+  <animal-list [childAnimalList]="masterAnimalList" (editClick)="editAnimal($event)"></animal-list>
   <hr>
   <new-animal *ngIf="showNewAnimalForm" (newAnimalSender)="addAnimal($event)"></new-animal>
   <edit-animal [childSelectedAnimal]="selectedAnimal" (doneEditingSender)="finishedEditing()"></edit-animal>
