@@ -19,6 +19,7 @@ export class AppComponent {
   ];
 
   addAnimal(newAnimal: Animal){
+    this.showNewAnimalForm = false;
     this.masterAnimalList.push(newAnimal);
   }
 
@@ -28,5 +29,9 @@ export class AppComponent {
 
   finishedEditing(){
     this.selectedAnimal = null;
+  }
+
+  toggleNewAnimalForm(){
+    this.showNewAnimalForm = !this.showNewAnimalForm;
   }
 }

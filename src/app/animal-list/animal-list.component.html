@@ -3,7 +3,7 @@
   <option value="young">Young animals (younger than 2 yrs)</option>
   <option value="mature">Mature animals (older than 2 yrs)</option>
 </select>
-<div *ngFor="let animal of childAnimalList | age">
+<div *ngFor="let animal of childAnimalList | age:filterByAge">
   <div class="animal-field">
     <span class="field-key">Species: </span>
     <span class="field-value">{{animal.species}}</span>
@@ -46,3 +46,4 @@
   </div><br/>
   <button (click)="editButtonClicked(animal)">Edit</button>
 </div>
+<button (click)="addNewAnimalClicked()">Add New Animal</button>
