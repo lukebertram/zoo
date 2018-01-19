@@ -1,6 +1,41 @@
 <div *ngIf="childSelectedAnimal">
-  <p>
-    edit-animal works!
-  </p>
+  <h3>Edit Animal Entry</h3>
+  <div class="form-group">
+    <label>Species:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.species"/>
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.name"/>
+  </div>
+  <div class="form-group">
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="childSelectedAnimal.age"/>
+  </div>
+  <div class="form-group">
+    <label>Diet:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.diet"/>
+  </div>
+  <div class="form-group">
+    <label>Location:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.location"/>
+  </div>
+  <div class="form-group">
+    <label>Caretakers:</label>
+    <input type="number" [(ngModel)]="childSelectedAnimal.caretakers"/>
+  </div>
+  <div class="form-group">
+    <label>Sex:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.sex"/>
+  </div>
+  <!-- <div class="form-group">
+    <label>Likes:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.likes"/>
+  </div>
+  <div class="form-group">
+    <label>Dislikes:</label>
+    <input type="text" [(ngModel)]="childSelectedAnimal.dislikes"/>
+  </div> -->
+
   <button (click)="doneButtonClicked()">Done</button>
 </div>
