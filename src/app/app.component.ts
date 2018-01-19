@@ -9,7 +9,7 @@ import { Animal }    from './animal.model';
 export class AppComponent {
   title = 'Zoo Keeper';
   selectedAnimal: Animal = null;
-  showNewAnimalForm: boolean = true;
+  showNewAnimalForm: boolean = false;
 
 
   masterAnimalList: Animal[] = [
