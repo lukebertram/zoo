@@ -15,4 +15,8 @@ export class AppComponent {
     new Animal("Ocelot", "Revolver", 4, "Carnivore", "Tropical Rain Forest Building", 6, "Male", ["Laying in the sunshine", "Gun tricks"], ["Toys that are not rope-based"]),
     new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Herbivore", "Northern Trail", 2, "Female", ["Delicate roots and leaves"], ["Loud noises"])
   ];
+
+  addAnimal(newAnimal: Animal){
+    this.masterAnimalList.push(newAnimal);
+  }
 }
