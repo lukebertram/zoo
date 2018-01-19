@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Features to Implement:
 
-- [ ] Zoo staff should be able to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sec, one like and one dislike.
+- [ ] Zoo staff should be able to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
 
 - [ ] Zoo staff should be able to view a list of animals that have been logged.
 

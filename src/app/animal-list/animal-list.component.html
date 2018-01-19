@@ -29,11 +29,15 @@
   </div><br/>
   <div class="animal-field">
     <span class="field-key">Likes: </span>
-    <span class="field-value">{{animal.likes[0]}}</span>
+    <ul class="field-value">
+      <li *ngFor="let like of animal.likes">{{like}}</li>
+    </ul>
   </div><br/>
   <div class="animal-field">
     <span class="field-key">Dislikes: </span>
-    <span class="field-value">{{animal.dislikes[0]}}</span>
+    <ul class="field-value">
+      <li *ngFor="let dislike of animal.dislikes">{{dislike}}</li>
+    </ul>
   </div><br/>
 
 </div>
