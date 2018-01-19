@@ -7,6 +7,8 @@ import { Animal } from './../animal.model';
   styleUrls: ['./animal-list.component.css']
 })
 export class AnimalListComponent {
+
+  filterByAge: string = "all";
   @Input() childAnimalList: Animal[];
   @Output() editClick = new EventEmitter();
 
@@ -16,5 +18,7 @@ export class AnimalListComponent {
     this.editClick.emit(animalToEdit);
   }
 
-
+  filterChange(optionFromMenu: string){
+    this.filterByAge = optionFromMenu;
+  }
 }

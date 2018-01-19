@@ -1,4 +1,9 @@
-<div *ngFor="let animal of childAnimalList">
+<select (change)="filterChange($event.target.value)">
+  <option value="all">All Animals</option>
+  <option value="young">Young animals (younger than 2 yrs)</option>
+  <option value="mature">Mature animals (older than 2 yrs)</option>
+</select>
+<div *ngFor="let animal of childAnimalList | age">
   <div class="animal-field">
     <span class="field-key">Species: </span>
     <span class="field-value">{{animal.species}}</span>
