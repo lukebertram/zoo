@@ -55,3 +55,9 @@ The following are features that I'd like to implement in the event that the app 
 - Implement SASS architecture and styling
 - Filter displayed animals by diet (herbivore, carnivore, omnivore)
 - Include a field for each animal that shows when they were admitted. This should be automatically included by the app at the time of the animal's admittance and also be editable by users after the fact.
+
+### Research Conducted
+
+I ran into an issue while implementing the new animal form. Unlike most of the examples projects I have participated in up until now, Animal objects require a lot of arguments to construct. So naturally the form to collect user input for a new animal has a lot of input field values to read in. In the past we've eschewed <form> elements and simply read each input individually at the time the user submits it. This implementation seems to messy to use with the Animal data model.
+
+Long story short, I'm looking for a way to read in all the form inputs with minimal code in the new-animal view template - ideally with a single statement instead of listing every input field individually in the click-handler directive.
