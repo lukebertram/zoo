@@ -10,6 +10,7 @@ export class AnimalListComponent {
 
   filterByAge: string = "all";
   @Input() childAnimalList: Animal[];
+  @Input() childShowAddButton: boolean;
   @Output() editClick = new EventEmitter();
   @Output() addClick = new EventEmitter();
 

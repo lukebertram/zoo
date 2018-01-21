@@ -1,0 +1,24 @@
+.row{
+  padding-top: 10px;
+}
+
+.animal-card{
+  background-color: #eee;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px;
+}
+
+.animal-field{
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-button{
+  align-self: center;
+  background-color: #ccc;
+}

@@ -9,6 +9,7 @@ import { Animal }    from './animal.model';
 export class AppComponent {
   title = 'Zoo Keeper';
   selectedAnimal: Animal = null;
+  masterShowAddButton: boolean = true;
   showNewAnimalForm: boolean = false;
 
 
@@ -33,5 +34,6 @@ export class AppComponent {
 
   toggleNewAnimalForm(){
     this.showNewAnimalForm = !this.showNewAnimalForm;
+    this.masterShowAddButton = !this.masterShowAddButton;
   }
 }

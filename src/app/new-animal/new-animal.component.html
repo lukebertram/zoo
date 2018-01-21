@@ -19,7 +19,7 @@
   <label>Dislikes:</label>
   <input type="text" #newDislikes><br/>
 <!-- TO DO: refactor to submit entire form at once instead of the following -->
-  <button (click)="submitForm(newSpecies.value,
+  <button class="btn btn-primary" (click)="submitForm(newSpecies.value,
                               newName.value,
                               newAge.value,
                               newDiet.value,
@@ -38,4 +38,5 @@
                   newSex.value='';
                   newLikes.value='';
                   newDislikes.value='';">Done</button>
+  <button class="btn btn-dark" (click)="cancelAddAnimal()">Cancel</button>
 </div>

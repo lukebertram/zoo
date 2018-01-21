@@ -1,49 +1,58 @@
+<label>Filter Animals by Age:</label>
 <select (change)="filterChange($event.target.value)">
   <option value="all">All Animals</option>
   <option value="young">Young animals (younger than 2 yrs)</option>
   <option value="mature">Mature animals (older than 2 yrs)</option>
-</select>
-<div *ngFor="let animal of childAnimalList | age:filterByAge">
-  <div class="animal-field">
-    <span class="field-key">Species: </span>
-    <span class="field-value">{{animal.species}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Name: </span>
-    <span class="field-value">{{animal.name}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Age: </span>
-    <span class="field-value">{{animal.age}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Diet: </span>
-    <span class="field-value">{{animal.diet}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Location: </span>
-    <span class="field-value">{{animal.location}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Caretakers: </span>
-    <span class="field-value">{{animal.caretakers}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Sex: </span>
-    <span class="field-value">{{animal.sex}}</span>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Likes: </span>
-    <ul class="field-value">
-      <li *ngFor="let like of animal.likes">{{like}}</li>
-    </ul>
-  </div><br/>
-  <div class="animal-field">
-    <span class="field-key">Dislikes: </span>
-    <ul class="field-value">
-      <li *ngFor="let dislike of animal.dislikes">{{dislike}}</li>
-    </ul>
-  </div><br/>
-  <button (click)="editButtonClicked(animal)">Edit</button>
-</div>
-<button (click)="addNewAnimalClicked()">Add New Animal</button>
+</select><br/>
+
+<button class="btn btn-success" *ngIf="childShowAddButton" (click)="addNewAnimalClicked()">Add New Animal</button>
+
+<div class="row">
+  <div class="col-md-4 animal-col" *ngFor="let animal of childAnimalList | age:filterByAge">
+    <div class="card animal-card">
+
+      <div class="animal-field">
+        <span class="field-key">Species: </span>
+        <span class="field-value">{{animal.species}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Name: </span>
+        <span class="field-value">{{animal.name}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Age: </span>
+        <span class="field-value">{{animal.age}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Diet: </span>
+        <span class="field-value">{{animal.diet}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Location: </span>
+        <span class="field-value">{{animal.location}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Caretakers: </span>
+        <span class="field-value">{{animal.caretakers}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Sex: </span>
+        <span class="field-value">{{animal.sex}}</span>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Likes: </span>
+        <ul class="field-value">
+          <li *ngFor="let like of animal.likes">{{like}}</li>
+        </ul>
+      </div><br/>
+      <div class="animal-field">
+        <span class="field-key">Dislikes: </span>
+        <ul class="field-value">
+          <li *ngFor="let dislike of animal.dislikes">{{dislike}}</li>
+        </ul>
+      </div><br/>
+      <button class="btn edit-button" (click)="editButtonClicked(animal)">Edit</button>
+
+    </div>
+  </div>
+</div><!--end of row-->
