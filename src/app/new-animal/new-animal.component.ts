@@ -8,6 +8,7 @@ import { Animal } from './../animal.model';
 })
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
+  @Output() cancelNewAnimal = new EventEmitter();
 
   constructor() { }
 
@@ -30,4 +31,7 @@ export class NewAnimalComponent {
     this.newAnimalSender.emit(newAnimal);
   }
 
+  cancelAddAnimal(){
+    this.cancelNewAnimal.emit();
+  }
 }
