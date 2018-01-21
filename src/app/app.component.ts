@@ -21,6 +21,7 @@ export class AppComponent {
 
   addAnimal(newAnimal: Animal){
     this.showNewAnimalForm = false;
+    this.masterShowAddButton = !this.masterShowAddButton;
     this.masterAnimalList.push(newAnimal);
   }
 
