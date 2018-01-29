@@ -1,5 +1,14 @@
 # ZooApp
 
+#### An AngularJS application for tracking details about the animals at the local zoo, January 19th, 2018
+
+#### By **Luke Bertram**
+
+## Description
+
+This project uses AngularJS to build a component-based application for tracking the animals who live at a local zoo. It allows for users to add, edit, and/or remove animal entries.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
@@ -47,10 +56,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Animal Age Pipe
 - Animal Class
 
-### Feature Wishlist
+## Feature Wishlist
 
 The following are features that I'd like to implement in the event that the app is approved for a larger project:
 
+- Include the ability to edit multiple likes/dislikes for each animal, including a button to add another like/dislike field on the edit form and a delete button next to each like/dislike .
+- Arrange for add new Animal button to reside inside the new-animal component instead of in the animal-list component.
+- Include a firebase database to store animal data between sessions
+- Include functionality for tracking users and requiring login credentials before being able to edit animal entries.
 - Refactor new Animal form view template to read in the entire form in a single directive statement if possible
 - Include photos of each animal as a part of the displayed animal information
 - Implement SASS architecture and styling
